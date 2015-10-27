@@ -16,6 +16,7 @@ import java.util.Scanner;
  * @author Hery Nugroho
  */
 public class UTSProgjar {
+    private static Object client;
 
     /**
      * @param args the command line arguments
@@ -33,9 +34,9 @@ public class UTSProgjar {
         
         System.out.println("User Name: ");
         int NRP_anda = nama.nextInt();
-       
-        os.write(NRP_anda);
-        System.out.println("Loged on");
+        //System.out.println(NRP_anda);
+        os.write(NRP_anda);        
+        //System.out.println("Loged on");
         
         }
     
