@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package utsprogjar;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.Socket;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Hery Nugroho
+ */
+public class UTSProgjar {
+
+    /**
+     * @param args the command line arguments
+     * @throws java.io.IOException
+     */
+    public static void main(String[] args) throws IOException {
+        byte[] buff = new byte[1024];
+        
+        Socket socket = new Socket("10.151.34.155", 6666);
+        
+        InputStream is = socket.getInputStream();
+        OutputStream os = socket.getOutputStream();
+        
+        Scanner nama = new Scanner(System.in);
+        
+        System.out.println("User Name: ");
+        int NRP_anda = nama.nextInt();
+       
+        os.write(NRP_anda);
+        System.out.println("Loged on");
+        
+        }
+    
+}
